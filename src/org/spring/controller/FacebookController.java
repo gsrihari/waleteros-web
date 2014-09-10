@@ -146,5 +146,32 @@ public class FacebookController {
 			
 		}
 	}
+	
+	{
+		/*(function() {
+
+  var app = angular.module("waleteros", ["ngRoute","ui.bootstrap","ngCookies"]);
+
+  app.config(function($routeProvider) {
+    $routeProvider
+		.when("/",{
+			templateUrl:"views/login.html",
+			controller:"LoginCtrl"
+		})  
+		.when("/forgotpin",{
+			templateUrl:"views/forgotpin.html",
+			controller:"ForgotPinCtrl"
+		})
+		.otherwise({
+			redirectTo: "/"
+		});
+	}).run(function($rootScope) {
+		$rootScope.username = '';
+	});
+}());*/
+	
+	
+	
+	}
 
 }
