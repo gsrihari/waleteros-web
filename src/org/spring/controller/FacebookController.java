@@ -146,5 +146,44 @@ public class FacebookController {
 			
 		}
 	}
+	
+	{
+	
+		(function(){
+
+	var app = angular.module("waleterosAdmin");
+		
+	var HeaderCtrl=function($scope,$cookieStore,$cookies,$rootScope)
+	{
+		//alert($scope.test);
+		//alert($scope.test);
+		$scope.cookval = $cookieStore.get('username');
+		$rootScope.test="Test";
+		alert('in header ctrl rootScope is assigned = '+$rootScope.test);
+		alert('in header ctrl username = '+$rootScope.test1)
+		//$scope.cookval = $cookies.username;
+		if ($scope.cookval == null|| $scope.cookval == '' || $scope.cookval == undefined){
+			window.location.href="/waleteros/admin.html"
+		}
+		$scope.username=$scope.cookval;
+		
+		$scope.logout=function()
+		{	
+			//$cookieStore.put('username','');
+			//alert($cookieStore.remove('username'))
+			$cookieStore.remove('username');
+			//delete $cookies["username"];
+			//$cookies.username = '';
+			//$cookieStore.put('username', 'undefined');
+			window.location.href="/waleteros/admin.html"
+		}
+	};
+	
+	app.controller("HeaderCtrl", HeaderCtrl);
+
+}());
+	
+	
+	}
 
 }
